@@ -10,23 +10,8 @@ import UIKit
 
 class ViewController: UIViewController {
 
-    @IBOutlet weak var minusButton: SpecialButton!
-    @IBOutlet weak var dropButton: SpecialButton!
-    @IBOutlet weak var equalButton: SpecialButton!
-    @IBOutlet weak var zeroButton: SpecialButton!
-    @IBOutlet weak var plusButton: SpecialButton!
-    @IBOutlet weak var threeButton: SpecialButton!
-    @IBOutlet weak var twoButton: SpecialButton!
-    @IBOutlet weak var oneButton: SpecialButton!
-    @IBOutlet weak var divButton: SpecialButton!
-    @IBOutlet weak var sixButton: SpecialButton!
-    @IBOutlet weak var fiveButton: SpecialButton!
-    @IBOutlet weak var fourButton: SpecialButton!
-    @IBOutlet weak var multButton: SpecialButton!
-    @IBOutlet weak var nineBUtton: SpecialButton!
-    @IBOutlet weak var eightButton: SpecialButton!
-    @IBOutlet weak var sevenButton: SpecialButton!
-    @IBOutlet weak var result: ShowResult!
+  
+    @IBOutlet weak var result: UITextField!
     
     let calc = Calculation()
     

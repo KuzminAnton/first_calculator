@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <device id="retina5_9" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -12,308 +12,437 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Calculator" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="7za-LX-Vqm">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="885"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="aHQ-HI-QSs">
+                                <rect key="frame" x="5" y="226" width="364" height="0.0"/>
                                 <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="QHY-Oa-nzn">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="319"/>
-                                        <subviews>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="JOV-L1-vKw" customClass="ShowResult" customModule="Calculator" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="0.0" width="414" height="319"/>
-                                                <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
-                                                <color key="textColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="50"/>
-                                                <textInputTraits key="textInputTraits"/>
-                                            </textField>
-                                        </subviews>
-                                    </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="Bqw-Np-CMo">
-                                        <rect key="frame" x="0.0" y="319" width="414" height="104"/>
-                                        <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nqT-GZ-RVc" customClass="SpecialButton" customModule="Calculator" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="0.0" width="100" height="104"/>
-                                                <color key="backgroundColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                                <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
-                                                <state key="normal" title="7"/>
-                                                <userDefinedRuntimeAttributes>
-                                                    <userDefinedRuntimeAttribute type="string" keyPath="buttonValue" value="7"/>
-                                                </userDefinedRuntimeAttributes>
-                                                <connections>
-                                                    <action selector="buttonClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gQH-Hi-l3x"/>
-                                                </connections>
-                                            </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fwZ-gn-ik5" customClass="SpecialButton" customModule="Calculator" customModuleProvider="target">
-                                                <rect key="frame" x="105" y="0.0" width="99.5" height="104"/>
-                                                <color key="backgroundColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                                <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
-                                                <state key="normal" title="8"/>
-                                                <userDefinedRuntimeAttributes>
-                                                    <userDefinedRuntimeAttribute type="string" keyPath="buttonValue" value="8"/>
-                                                </userDefinedRuntimeAttributes>
-                                                <connections>
-                                                    <action selector="buttonClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gB7-SX-Ybc"/>
-                                                </connections>
-                                            </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hiC-Vg-IIb" customClass="SpecialButton" customModule="Calculator" customModuleProvider="target">
-                                                <rect key="frame" x="209.5" y="0.0" width="100" height="104"/>
-                                                <color key="backgroundColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                                <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
-                                                <state key="normal" title="9"/>
-                                                <userDefinedRuntimeAttributes>
-                                                    <userDefinedRuntimeAttribute type="string" keyPath="buttonValue" value="9"/>
-                                                </userDefinedRuntimeAttributes>
-                                                <connections>
-                                                    <action selector="buttonClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Ww7-6g-7O6"/>
-                                                </connections>
-                                            </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5Fm-3f-XWu" customClass="SpecialButton" customModule="Calculator" customModuleProvider="target">
-                                                <rect key="frame" x="314.5" y="0.0" width="99.5" height="104"/>
-                                                <color key="backgroundColor" systemColor="opaqueSeparatorColor" red="0.77647058820000003" green="0.77647058820000003" blue="0.7843137255" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                                <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
-                                                <state key="normal" title="X"/>
-                                                <userDefinedRuntimeAttributes>
-                                                    <userDefinedRuntimeAttribute type="string" keyPath="buttonValue" value="*"/>
-                                                </userDefinedRuntimeAttributes>
-                                                <connections>
-                                                    <action selector="buttonClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="yOi-gI-5wz"/>
-                                                </connections>
-                                            </button>
-                                        </subviews>
-                                        <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                    </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="We7-xg-mte">
-                                        <rect key="frame" x="0.0" y="423" width="414" height="50"/>
-                                    </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="JRu-6S-hrb">
-                                        <rect key="frame" x="0.0" y="473" width="414" height="104"/>
-                                        <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UPV-hY-fr7" customClass="SpecialButton" customModule="Calculator" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="0.0" width="100" height="104"/>
-                                                <color key="backgroundColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                                <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
-                                                <state key="normal" title="4"/>
-                                                <userDefinedRuntimeAttributes>
-                                                    <userDefinedRuntimeAttribute type="string" keyPath="buttonValue" value="4"/>
-                                                </userDefinedRuntimeAttributes>
-                                                <connections>
-                                                    <action selector="buttonClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Ca1-Iq-Oaf"/>
-                                                </connections>
-                                            </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="v79-bG-XBr" customClass="SpecialButton" customModule="Calculator" customModuleProvider="target">
-                                                <rect key="frame" x="105" y="0.0" width="99.5" height="104"/>
-                                                <color key="backgroundColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                                <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
-                                                <state key="normal" title="5"/>
-                                                <userDefinedRuntimeAttributes>
-                                                    <userDefinedRuntimeAttribute type="string" keyPath="buttonValue" value="5"/>
-                                                </userDefinedRuntimeAttributes>
-                                                <connections>
-                                                    <action selector="buttonClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="oIU-n7-pV3"/>
-                                                </connections>
-                                            </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yER-cO-n6I" customClass="SpecialButton" customModule="Calculator" customModuleProvider="target">
-                                                <rect key="frame" x="209.5" y="0.0" width="100" height="104"/>
-                                                <color key="backgroundColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                                <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
-                                                <state key="normal" title="6"/>
-                                                <userDefinedRuntimeAttributes>
-                                                    <userDefinedRuntimeAttribute type="string" keyPath="buttonValue" value="6"/>
-                                                </userDefinedRuntimeAttributes>
-                                                <connections>
-                                                    <action selector="buttonClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="o2D-f4-RMh"/>
-                                                </connections>
-                                            </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6lf-Q0-XiI" customClass="SpecialButton" customModule="Calculator" customModuleProvider="target">
-                                                <rect key="frame" x="314.5" y="0.0" width="99.5" height="104"/>
-                                                <color key="backgroundColor" systemColor="opaqueSeparatorColor" red="0.77647058820000003" green="0.77647058820000003" blue="0.7843137255" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                                <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
-                                                <state key="normal" title="/"/>
-                                                <userDefinedRuntimeAttributes>
-                                                    <userDefinedRuntimeAttribute type="string" keyPath="buttonValue" value="/"/>
-                                                </userDefinedRuntimeAttributes>
-                                                <connections>
-                                                    <action selector="buttonClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="vgQ-3c-Sj4"/>
-                                                </connections>
-                                            </button>
-                                        </subviews>
-                                    </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="8Mi-Te-RBn">
-                                        <rect key="frame" x="0.0" y="577" width="414" height="50"/>
-                                    </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="C3V-Sz-2ng">
-                                        <rect key="frame" x="0.0" y="627" width="414" height="104"/>
-                                        <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jgo-PH-SnV" customClass="SpecialButton" customModule="Calculator" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="0.0" width="100" height="104"/>
-                                                <color key="backgroundColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                                <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
-                                                <state key="normal" title="1"/>
-                                                <userDefinedRuntimeAttributes>
-                                                    <userDefinedRuntimeAttribute type="string" keyPath="buttonValue" value="1"/>
-                                                </userDefinedRuntimeAttributes>
-                                                <connections>
-                                                    <action selector="buttonClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bNT-Im-ETJ"/>
-                                                </connections>
-                                            </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Knq-eA-awz" customClass="SpecialButton" customModule="Calculator" customModuleProvider="target">
-                                                <rect key="frame" x="105" y="0.0" width="99.5" height="104"/>
-                                                <color key="backgroundColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                                <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
-                                                <state key="normal" title="2"/>
-                                                <userDefinedRuntimeAttributes>
-                                                    <userDefinedRuntimeAttribute type="string" keyPath="buttonValue" value="2"/>
-                                                </userDefinedRuntimeAttributes>
-                                                <connections>
-                                                    <action selector="buttonClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="xpA-vq-Wu3"/>
-                                                </connections>
-                                            </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3KF-lS-X2a" customClass="SpecialButton" customModule="Calculator" customModuleProvider="target">
-                                                <rect key="frame" x="209.5" y="0.0" width="100" height="104"/>
-                                                <color key="backgroundColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                                <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
-                                                <state key="normal" title="3"/>
-                                                <userDefinedRuntimeAttributes>
-                                                    <userDefinedRuntimeAttribute type="string" keyPath="buttonValue" value="3"/>
-                                                </userDefinedRuntimeAttributes>
-                                                <connections>
-                                                    <action selector="buttonClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="blD-Oa-dia"/>
-                                                </connections>
-                                            </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bvc-bf-xHA" customClass="SpecialButton" customModule="Calculator" customModuleProvider="target">
-                                                <rect key="frame" x="314.5" y="0.0" width="99.5" height="104"/>
-                                                <color key="backgroundColor" systemColor="opaqueSeparatorColor" red="0.77647058820000003" green="0.77647058820000003" blue="0.7843137255" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                                <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
-                                                <state key="normal" title="+"/>
-                                                <userDefinedRuntimeAttributes>
-                                                    <userDefinedRuntimeAttribute type="string" keyPath="buttonValue" value="+"/>
-                                                </userDefinedRuntimeAttributes>
-                                                <connections>
-                                                    <action selector="buttonClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="z94-K6-b8z"/>
-                                                </connections>
-                                            </button>
-                                        </subviews>
-                                    </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="GeV-Dq-RbU">
-                                        <rect key="frame" x="0.0" y="731" width="414" height="50"/>
-                                    </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="YP8-qc-ZDh">
-                                        <rect key="frame" x="0.0" y="781" width="414" height="104"/>
-                                        <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9yQ-Wb-t59" customClass="SpecialButton" customModule="Calculator" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="0.0" width="100" height="104"/>
-                                                <color key="backgroundColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                                <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
-                                                <state key="normal" title="0"/>
-                                                <userDefinedRuntimeAttributes>
-                                                    <userDefinedRuntimeAttribute type="string" keyPath="buttonValue" value="0"/>
-                                                </userDefinedRuntimeAttributes>
-                                                <connections>
-                                                    <action selector="buttonClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="WAf-dX-IUU"/>
-                                                </connections>
-                                            </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="X6L-R0-9gB" customClass="SpecialButton" customModule="Calculator" customModuleProvider="target">
-                                                <rect key="frame" x="105" y="0.0" width="99.5" height="104"/>
-                                                <color key="backgroundColor" systemColor="opaqueSeparatorColor" red="0.77647058820000003" green="0.77647058820000003" blue="0.7843137255" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                                <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
-                                                <state key="normal" title="="/>
-                                                <userDefinedRuntimeAttributes>
-                                                    <userDefinedRuntimeAttribute type="string" keyPath="buttonValue" value="="/>
-                                                </userDefinedRuntimeAttributes>
-                                                <connections>
-                                                    <action selector="buttonClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="xUI-XR-Sjf"/>
-                                                </connections>
-                                            </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qGr-eI-H4j" customClass="SpecialButton" customModule="Calculator" customModuleProvider="target">
-                                                <rect key="frame" x="209.5" y="0.0" width="100" height="104"/>
-                                                <color key="backgroundColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                                <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
-                                                <state key="normal" title="C"/>
-                                                <userDefinedRuntimeAttributes>
-                                                    <userDefinedRuntimeAttribute type="string" keyPath="buttonValue" value="c"/>
-                                                </userDefinedRuntimeAttributes>
-                                                <connections>
-                                                    <action selector="buttonClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="9MW-3T-got"/>
-                                                </connections>
-                                            </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aGA-F5-TPQ" customClass="SpecialButton" customModule="Calculator" customModuleProvider="target">
-                                                <rect key="frame" x="314.5" y="0.0" width="99.5" height="104"/>
-                                                <color key="backgroundColor" systemColor="opaqueSeparatorColor" red="0.77647058820000003" green="0.77647058820000003" blue="0.7843137255" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                                <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
-                                                <state key="normal" title="-"/>
-                                                <userDefinedRuntimeAttributes>
-                                                    <userDefinedRuntimeAttribute type="string" keyPath="buttonValue" value="-"/>
-                                                </userDefinedRuntimeAttributes>
-                                                <connections>
-                                                    <action selector="buttonClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="wWc-d4-ZD0"/>
-                                                </connections>
-                                            </button>
-                                        </subviews>
-                                    </stackView>
+                                    <textField opaque="NO" contentMode="bottomLeft" semanticContentAttribute="forceLeftToRight" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="right" adjustsFontSizeToFit="NO" minimumFontSize="90" id="MPB-0g-O2w">
+                                        <rect key="frame" x="0.0" y="0.0" width="364" height="0.0"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <color key="textColor" systemColor="secondarySystemGroupedBackgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="90"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
                                 </subviews>
-                                <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <constraints>
-                                    <constraint firstItem="YP8-qc-ZDh" firstAttribute="top" secondItem="7za-LX-Vqm" secondAttribute="top" constant="781" id="8J2-eq-qkf"/>
-                                    <constraint firstItem="GeV-Dq-RbU" firstAttribute="top" secondItem="C3V-Sz-2ng" secondAttribute="bottom" id="AGy-6Z-Jbe"/>
-                                    <constraint firstItem="GeV-Dq-RbU" firstAttribute="top" secondItem="7za-LX-Vqm" secondAttribute="top" constant="731" id="S1X-o8-Ku6"/>
-                                    <constraint firstItem="8Mi-Te-RBn" firstAttribute="top" secondItem="7za-LX-Vqm" secondAttribute="top" constant="577" id="TDO-42-dve"/>
-                                    <constraint firstItem="C3V-Sz-2ng" firstAttribute="top" secondItem="7za-LX-Vqm" secondAttribute="top" constant="627" id="YaV-36-cKL"/>
-                                    <constraint firstItem="We7-xg-mte" firstAttribute="top" secondItem="7za-LX-Vqm" secondAttribute="top" constant="423" id="ZRD-jF-aBT"/>
-                                    <constraint firstItem="Bqw-Np-CMo" firstAttribute="top" secondItem="7za-LX-Vqm" secondAttribute="top" constant="319" id="ded-g8-8SY"/>
-                                    <constraint firstItem="JRu-6S-hrb" firstAttribute="top" secondItem="7za-LX-Vqm" secondAttribute="top" constant="473" id="ePk-ip-j7u"/>
-                                </constraints>
                             </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Bj-xh-JD2" customClass="SpecialButton" customModule="Calculator">
+                                <rect key="frame" x="5" y="326" width="85" height="85"/>
+                                <color key="backgroundColor" systemColor="opaqueSeparatorColor" red="0.77647058820000003" green="0.77647058820000003" blue="0.7843137255" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="85" id="2Dr-Vm-hld"/>
+                                    <constraint firstAttribute="width" constant="85" id="fGM-jQ-i3B"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <state key="normal" title="C"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="buttonValue" value="C"/>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="buttonClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gn5-do-dIK"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mh2-KK-siz" customClass="SpecialButton" customModule="Calculator">
+                                <rect key="frame" x="98" y="326" width="85" height="85"/>
+                                <color key="backgroundColor" systemColor="opaqueSeparatorColor" red="0.77647058820000003" green="0.77647058820000003" blue="0.7843137255" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="85" id="Nwh-w7-zC1"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="85" id="UKq-bU-zkW"/>
+                                    <constraint firstAttribute="width" constant="85" id="fMZ-RB-ibf"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <state key="normal" title="+/-"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="buttonValue" value="s"/>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="buttonClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="XMs-mZ-D9I"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ILn-tk-Tch" customClass="SpecialButton" customModule="Calculator">
+                                <rect key="frame" x="191" y="326" width="85" height="85"/>
+                                <color key="backgroundColor" systemColor="opaqueSeparatorColor" red="0.77647058820000003" green="0.77647058820000003" blue="0.7843137255" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="85" id="ie3-JJ-c2o"/>
+                                    <constraint firstAttribute="height" constant="85" id="kMF-QM-usj"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <state key="normal" title="%"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="buttonValue" value="%"/>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="buttonClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="jeP-qo-LYf"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dwa-r2-JDs" customClass="SpecialButton" customModule="Calculator">
+                                <rect key="frame" x="284" y="326" width="85" height="85"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="85" id="2pg-TZ-6mH"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="85" id="AIN-WL-X5e"/>
+                                    <constraint firstAttribute="height" constant="85" id="Dee-g3-RD2"/>
+                                    <constraint firstAttribute="width" constant="85" id="sBE-kC-7s7"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <state key="normal" title=" /"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="buttonValue" value="/"/>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="buttonClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="srD-zB-wyO"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WcD-V7-vDi" customClass="SpecialButton" customModule="Calculator">
+                                <rect key="frame" x="5" y="419" width="85" height="85"/>
+                                <color key="backgroundColor" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="85" id="FKz-OC-cwS"/>
+                                    <constraint firstAttribute="height" constant="85" id="icY-am-2es"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <state key="normal" title="7"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="buttonValue" value="7"/>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="buttonClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="mwl-q3-Sfe"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7xt-Eq-W1V" customClass="SpecialButton" customModule="Calculator">
+                                <rect key="frame" x="98" y="419" width="85" height="85"/>
+                                <color key="backgroundColor" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="85" id="29z-qb-pyo"/>
+                                    <constraint firstAttribute="height" constant="85" id="uB0-kV-TbW"/>
+                                    <constraint firstAttribute="width" constant="85" id="yFd-tY-3He"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <state key="normal" title="8"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="buttonValue" value="8"/>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="buttonClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="AIo-Rn-IWZ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vju-tB-8zo" customClass="SpecialButton" customModule="Calculator">
+                                <rect key="frame" x="191" y="419" width="85" height="85"/>
+                                <color key="backgroundColor" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="85" id="2he-DH-9n6"/>
+                                    <constraint firstAttribute="height" constant="85" id="Ec8-ul-msP"/>
+                                    <constraint firstAttribute="width" constant="85" id="Wgt-k5-rAk"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="85" id="kIO-oc-iTi"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <state key="normal" title="9"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="buttonValue" value="9"/>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="buttonClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="odP-Xy-E9S"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iJ9-Qg-SB1" customClass="SpecialButton" customModule="Calculator">
+                                <rect key="frame" x="284" y="419" width="85" height="85"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="85" id="eCI-yD-31V"/>
+                                    <constraint firstAttribute="width" constant="85" id="qH0-9H-jqU"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <state key="normal" title="x"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="buttonValue" value="*"/>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="buttonClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="o5Q-oS-GL2"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UKn-sJ-xXT" customClass="SpecialButton" customModule="Calculator">
+                                <rect key="frame" x="5" y="512" width="85" height="85"/>
+                                <color key="backgroundColor" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="85" id="7wO-jw-fPN"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="85" id="OG2-oV-XGn"/>
+                                    <constraint firstAttribute="height" constant="85" id="hTG-eb-aqf"/>
+                                    <constraint firstAttribute="width" constant="85" id="jZJ-iP-otG"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <state key="normal" title="4"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="buttonValue" value="4"/>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="buttonClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="oM1-nk-FFi"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qdc-U0-dE9" customClass="SpecialButton" customModule="Calculator">
+                                <rect key="frame" x="98" y="512" width="85" height="85"/>
+                                <color key="backgroundColor" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="85" id="GSk-tB-U0s"/>
+                                    <constraint firstAttribute="width" constant="85" id="OZv-bU-Cj0"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <state key="normal" title="5"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="buttonValue" value="5"/>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="buttonClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="iMU-25-ge2"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Huj-nF-dWB" customClass="SpecialButton" customModule="Calculator">
+                                <rect key="frame" x="191" y="512" width="85" height="85"/>
+                                <color key="backgroundColor" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="85" id="7ph-v6-2d2"/>
+                                    <constraint firstAttribute="width" constant="85" id="jhd-Pa-00D"/>
+                                    <constraint firstAttribute="height" constant="85" id="yry-fj-FoV"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <state key="normal" title="6"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="buttonValue" value="6"/>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="buttonClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="9jw-UP-HAJ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u1M-x7-zOc" customClass="SpecialButton" customModule="Calculator">
+                                <rect key="frame" x="284" y="512" width="85" height="85"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="85" id="CgX-io-sB1"/>
+                                    <constraint firstAttribute="height" constant="85" id="KEk-3Y-icb"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="85" id="UeY-ac-cho"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <state key="normal" title="-"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="buttonValue" value="-"/>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="buttonClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="iWg-JR-QBW"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N4E-DM-eaA" customClass="SpecialButton" customModule="Calculator">
+                                <rect key="frame" x="5" y="605" width="85" height="85"/>
+                                <color key="backgroundColor" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="85" id="TTx-uX-KwK"/>
+                                    <constraint firstAttribute="width" constant="85" id="XLZ-lu-Jce"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="85" id="dJH-rm-VWU"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <state key="normal" title="1"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="buttonValue" value="1"/>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="buttonClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="F45-AV-WwD"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QR5-SI-swe" customClass="SpecialButton" customModule="Calculator">
+                                <rect key="frame" x="98" y="605" width="85" height="85"/>
+                                <color key="backgroundColor" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="85" id="U7e-hk-Wyu"/>
+                                    <constraint firstAttribute="height" constant="85" id="bPm-nA-Uwj"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="85" id="xIw-tK-0PJ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <state key="normal" title="2"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="buttonValue" value="2"/>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="buttonClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="2gX-GD-HG7"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sh1-lX-wvf" customClass="SpecialButton" customModule="Calculator">
+                                <rect key="frame" x="191" y="605" width="85" height="85"/>
+                                <color key="backgroundColor" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="85" id="KWg-pW-Vac"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="85" id="N7M-Pu-Cpm"/>
+                                    <constraint firstAttribute="width" constant="85" id="odE-qC-OtJ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <state key="normal" title="3"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="buttonValue" value="3"/>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="buttonClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fmB-KJ-hHB"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PWf-s4-zuM" customClass="SpecialButton" customModule="Calculator">
+                                <rect key="frame" x="284" y="605" width="85" height="85"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="85" id="UNM-9s-vPm"/>
+                                    <constraint firstAttribute="width" constant="85" id="yex-fg-mFC"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <state key="normal" title="+"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="buttonValue" value="+"/>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="buttonClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="jTi-aW-Sat"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RFd-oQ-mTe" customClass="SpecialButton" customModule="Calculator">
+                                <rect key="frame" x="5" y="698" width="178" height="85"/>
+                                <color key="backgroundColor" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <state key="normal" title="0"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="buttonValue" value="0"/>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="buttonClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="iAO-oc-Vea"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Uec-PJ-fCK" customClass="SpecialButton" customModule="Calculator">
+                                <rect key="frame" x="191" y="698" width="85" height="85"/>
+                                <color key="backgroundColor" systemColor="systemYellowColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="85" id="2dr-2T-zY8"/>
+                                    <constraint firstAttribute="height" constant="85" id="bAR-wa-ouE"/>
+                                    <constraint firstAttribute="width" constant="85" id="gsC-bY-2aM"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <state key="normal" title="."/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="buttonValue" value="."/>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="buttonClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="3sj-Go-5A2"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sdk-ce-uWa" customClass="SpecialButton" customModule="Calculator">
+                                <rect key="frame" x="284" y="698" width="85" height="85"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="85" id="3OI-fr-7zc"/>
+                                    <constraint firstAttribute="height" constant="85" id="TwG-tu-gRi"/>
+                                    <constraint firstAttribute="width" constant="85" id="yjf-XR-Q4Y"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <state key="normal" title="="/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="buttonValue" value="="/>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="buttonClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="CUO-f2-vfs"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
                         <constraints>
-                            <constraint firstItem="7za-LX-Vqm" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="23V-gW-nQB"/>
-                            <constraint firstItem="7za-LX-Vqm" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" constant="-44" id="WJE-CR-Cek"/>
-                            <constraint firstItem="7za-LX-Vqm" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="YX0-D9-dWY"/>
-                            <constraint firstAttribute="bottomMargin" secondItem="7za-LX-Vqm" secondAttribute="bottom" constant="-23" id="rKg-di-Tzb"/>
+                            <constraint firstItem="QR5-SI-swe" firstAttribute="top" secondItem="sh1-lX-wvf" secondAttribute="top" id="2rq-7I-4eo"/>
+                            <constraint firstItem="Dwa-r2-JDs" firstAttribute="trailing" secondItem="PWf-s4-zuM" secondAttribute="trailing" id="47D-V0-q32"/>
+                            <constraint firstItem="sdk-ce-uWa" firstAttribute="centerY" secondItem="RFd-oQ-mTe" secondAttribute="centerY" id="4tx-15-7fe"/>
+                            <constraint firstItem="Dwa-r2-JDs" firstAttribute="baseline" secondItem="mh2-KK-siz" secondAttribute="firstBaseline" id="4ws-xT-gZl"/>
+                            <constraint firstItem="mh2-KK-siz" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="98" id="4yA-Ek-oGk"/>
+                            <constraint firstItem="sdk-ce-uWa" firstAttribute="top" secondItem="RFd-oQ-mTe" secondAttribute="top" id="67J-iB-k1l"/>
+                            <constraint firstItem="mh2-KK-siz" firstAttribute="trailing" secondItem="Qdc-U0-dE9" secondAttribute="trailing" id="6Og-VB-Rbv"/>
+                            <constraint firstItem="QR5-SI-swe" firstAttribute="top" secondItem="PWf-s4-zuM" secondAttribute="top" id="6ix-bV-aoU"/>
+                            <constraint firstItem="PWf-s4-zuM" firstAttribute="top" secondItem="u1M-x7-zOc" secondAttribute="bottom" constant="8" id="78U-ff-1VE"/>
+                            <constraint firstItem="mh2-KK-siz" firstAttribute="trailing" secondItem="QR5-SI-swe" secondAttribute="trailing" id="Azi-ix-V9L"/>
+                            <constraint firstItem="Vju-tB-8zo" firstAttribute="leading" secondItem="7xt-Eq-W1V" secondAttribute="trailing" constant="8" id="BEH-Mz-5Dd"/>
+                            <constraint firstItem="RFd-oQ-mTe" firstAttribute="top" secondItem="QR5-SI-swe" secondAttribute="bottom" constant="8" id="CBJ-AO-TS7"/>
+                            <constraint firstItem="Dwa-r2-JDs" firstAttribute="trailing" secondItem="u1M-x7-zOc" secondAttribute="trailing" id="CPp-sa-KAn"/>
+                            <constraint firstItem="QR5-SI-swe" firstAttribute="top" secondItem="N4E-DM-eaA" secondAttribute="top" id="F1i-Wb-gCb"/>
+                            <constraint firstItem="ILn-tk-Tch" firstAttribute="leading" secondItem="mh2-KK-siz" secondAttribute="trailing" constant="8" id="F2V-2C-sDA"/>
+                            <constraint firstItem="iJ9-Qg-SB1" firstAttribute="top" secondItem="Dwa-r2-JDs" secondAttribute="bottom" constant="8" id="IZm-G4-p8q"/>
+                            <constraint firstItem="Dwa-r2-JDs" firstAttribute="leading" secondItem="PWf-s4-zuM" secondAttribute="leading" id="J1p-1D-cvp"/>
+                            <constraint firstItem="sdk-ce-uWa" firstAttribute="leading" secondItem="Uec-PJ-fCK" secondAttribute="trailing" constant="8" id="J9i-hi-P2r"/>
+                            <constraint firstItem="N4E-DM-eaA" firstAttribute="top" secondItem="UKn-sJ-xXT" secondAttribute="bottom" constant="8" id="JxB-gM-zoW"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Dwa-r2-JDs" secondAttribute="trailing" constant="6" id="K5y-q6-2Kc"/>
+                            <constraint firstItem="Dwa-r2-JDs" firstAttribute="leading" secondItem="iJ9-Qg-SB1" secondAttribute="leading" id="KAp-Ja-GAM"/>
+                            <constraint firstItem="Dwa-r2-JDs" firstAttribute="trailing" secondItem="iJ9-Qg-SB1" secondAttribute="trailing" id="Kan-Cu-Hmx"/>
+                            <constraint firstItem="6Bj-xh-JD2" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="5" id="MGy-Yh-Mx8"/>
+                            <constraint firstItem="ILn-tk-Tch" firstAttribute="top" secondItem="aHQ-HI-QSs" secondAttribute="bottom" constant="100" id="Mg3-tV-9iB"/>
+                            <constraint firstItem="mh2-KK-siz" firstAttribute="leading" secondItem="7xt-Eq-W1V" secondAttribute="leading" id="PSl-uR-bTh"/>
+                            <constraint firstItem="sdk-ce-uWa" firstAttribute="top" secondItem="PWf-s4-zuM" secondAttribute="bottom" constant="8" id="RgO-Yj-Rn7"/>
+                            <constraint firstItem="sdk-ce-uWa" firstAttribute="baseline" secondItem="Uec-PJ-fCK" secondAttribute="firstBaseline" id="SUl-WY-Xad"/>
+                            <constraint firstItem="sdk-ce-uWa" firstAttribute="top" secondItem="Uec-PJ-fCK" secondAttribute="top" id="UGA-7o-QYY"/>
+                            <constraint firstItem="Dwa-r2-JDs" firstAttribute="baseline" secondItem="6Bj-xh-JD2" secondAttribute="firstBaseline" id="UIQ-36-yp3"/>
+                            <constraint firstItem="mh2-KK-siz" firstAttribute="trailing" secondItem="7xt-Eq-W1V" secondAttribute="trailing" id="UMm-Wm-FBt"/>
+                            <constraint firstItem="Dwa-r2-JDs" firstAttribute="baseline" secondItem="ILn-tk-Tch" secondAttribute="firstBaseline" id="VXG-H7-Bpi"/>
+                            <constraint firstItem="Dwa-r2-JDs" firstAttribute="leading" secondItem="sdk-ce-uWa" secondAttribute="leading" id="Vbx-3S-fmY"/>
+                            <constraint firstItem="sh1-lX-wvf" firstAttribute="leading" secondItem="QR5-SI-swe" secondAttribute="trailing" constant="8" id="Wr7-8B-vMx"/>
+                            <constraint firstItem="PWf-s4-zuM" firstAttribute="leading" secondItem="sh1-lX-wvf" secondAttribute="trailing" constant="8" id="XL6-9h-1ah"/>
+                            <constraint firstItem="WcD-V7-vDi" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="5" id="XYv-dA-dmd"/>
+                            <constraint firstItem="Huj-nF-dWB" firstAttribute="top" secondItem="Vju-tB-8zo" secondAttribute="bottom" constant="8" id="Yxt-hx-TCU"/>
+                            <constraint firstItem="QR5-SI-swe" firstAttribute="leading" secondItem="N4E-DM-eaA" secondAttribute="trailing" constant="8" id="aVs-gv-xTO"/>
+                            <constraint firstItem="PWf-s4-zuM" firstAttribute="top" secondItem="u1M-x7-zOc" secondAttribute="bottom" constant="8" id="aZg-Yo-qBL"/>
+                            <constraint firstItem="QR5-SI-swe" firstAttribute="baseline" secondItem="N4E-DM-eaA" secondAttribute="firstBaseline" id="aus-rk-RBD"/>
+                            <constraint firstItem="mh2-KK-siz" firstAttribute="leading" secondItem="Qdc-U0-dE9" secondAttribute="leading" id="c10-zr-bRV"/>
+                            <constraint firstItem="Qdc-U0-dE9" firstAttribute="leading" secondItem="UKn-sJ-xXT" secondAttribute="trailing" constant="8" id="c2s-DB-ziA"/>
+                            <constraint firstItem="Dwa-r2-JDs" firstAttribute="leading" secondItem="u1M-x7-zOc" secondAttribute="leading" id="c33-Vz-L92"/>
+                            <constraint firstItem="7xt-Eq-W1V" firstAttribute="top" secondItem="mh2-KK-siz" secondAttribute="bottom" constant="8" id="cY5-wH-FmB"/>
+                            <constraint firstItem="WcD-V7-vDi" firstAttribute="top" secondItem="6Bj-xh-JD2" secondAttribute="bottom" constant="8" id="eGM-lb-kyh"/>
+                            <constraint firstItem="Dwa-r2-JDs" firstAttribute="top" secondItem="ILn-tk-Tch" secondAttribute="top" id="hvv-Ff-3wW"/>
+                            <constraint firstItem="Vju-tB-8zo" firstAttribute="top" secondItem="ILn-tk-Tch" secondAttribute="bottom" constant="8" id="iZo-5U-vvf"/>
+                            <constraint firstItem="Dwa-r2-JDs" firstAttribute="top" secondItem="aHQ-HI-QSs" secondAttribute="bottom" constant="100" id="j5U-UM-rGh"/>
+                            <constraint firstItem="mh2-KK-siz" firstAttribute="trailing" secondItem="RFd-oQ-mTe" secondAttribute="trailing" id="jaF-MC-MCT"/>
+                            <constraint firstItem="mh2-KK-siz" firstAttribute="leading" secondItem="QR5-SI-swe" secondAttribute="leading" id="ju5-du-MZY"/>
+                            <constraint firstItem="PWf-s4-zuM" firstAttribute="leading" secondItem="sh1-lX-wvf" secondAttribute="trailing" constant="8" id="kf8-7p-ih9"/>
+                            <constraint firstItem="RFd-oQ-mTe" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="5" id="kzQ-PU-3SJ"/>
+                            <constraint firstItem="QR5-SI-swe" firstAttribute="baseline" secondItem="sh1-lX-wvf" secondAttribute="firstBaseline" id="mBs-kw-0Np"/>
+                            <constraint firstItem="Huj-nF-dWB" firstAttribute="leading" secondItem="Qdc-U0-dE9" secondAttribute="trailing" constant="8" id="mv2-U3-Yq7"/>
+                            <constraint firstItem="Qdc-U0-dE9" firstAttribute="top" secondItem="7xt-Eq-W1V" secondAttribute="bottom" constant="8" id="nQG-cl-X21"/>
+                            <constraint firstItem="Dwa-r2-JDs" firstAttribute="top" secondItem="mh2-KK-siz" secondAttribute="top" id="qLR-Ti-ny7"/>
+                            <constraint firstItem="UKn-sJ-xXT" firstAttribute="top" secondItem="WcD-V7-vDi" secondAttribute="bottom" constant="8" id="qi0-xh-vf0"/>
+                            <constraint firstItem="7xt-Eq-W1V" firstAttribute="top" secondItem="mh2-KK-siz" secondAttribute="bottom" constant="8" id="r6v-V7-PEp"/>
+                            <constraint firstItem="N4E-DM-eaA" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="5" id="rR4-as-Un9"/>
+                            <constraint firstItem="6Bj-xh-JD2" firstAttribute="top" secondItem="aHQ-HI-QSs" secondAttribute="bottom" constant="100" id="rhE-C0-Qjk"/>
+                            <constraint firstItem="7xt-Eq-W1V" firstAttribute="leading" secondItem="WcD-V7-vDi" secondAttribute="trailing" constant="8" id="sWf-ye-gGi"/>
+                            <constraint firstItem="Dwa-r2-JDs" firstAttribute="top" secondItem="6Bj-xh-JD2" secondAttribute="top" id="t45-9Q-fsr"/>
+                            <constraint firstItem="mh2-KK-siz" firstAttribute="leading" secondItem="6Bj-xh-JD2" secondAttribute="trailing" constant="8" id="tW1-KP-lPT"/>
+                            <constraint firstItem="Dwa-r2-JDs" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="326" id="tcL-Dw-Yuc"/>
+                            <constraint firstItem="mh2-KK-siz" firstAttribute="top" secondItem="aHQ-HI-QSs" secondAttribute="bottom" constant="100" id="u5d-qf-FLT"/>
+                            <constraint firstItem="PWf-s4-zuM" firstAttribute="top" secondItem="u1M-x7-zOc" secondAttribute="bottom" constant="8" id="vW3-j9-bZ3"/>
+                            <constraint firstItem="Dwa-r2-JDs" firstAttribute="leading" secondItem="ILn-tk-Tch" secondAttribute="trailing" constant="8" id="vqS-5g-W4J"/>
+                            <constraint firstItem="UKn-sJ-xXT" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="5" id="wws-Fi-vdr"/>
+                            <constraint firstItem="Dwa-r2-JDs" firstAttribute="trailing" secondItem="sdk-ce-uWa" secondAttribute="trailing" id="xGm-AT-v5Y"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
-                        <outlet property="divButton" destination="6lf-Q0-XiI" id="lzP-Nh-aWl"/>
-                        <outlet property="dropButton" destination="qGr-eI-H4j" id="YRj-7l-dGH"/>
-                        <outlet property="eightButton" destination="fwZ-gn-ik5" id="MHl-pM-ggH"/>
-                        <outlet property="equalButton" destination="X6L-R0-9gB" id="Ehf-yx-JLz"/>
-                        <outlet property="fiveButton" destination="v79-bG-XBr" id="0GU-n0-pgr"/>
-                        <outlet property="fourButton" destination="UPV-hY-fr7" id="LuT-0A-xrP"/>
-                        <outlet property="minusButton" destination="aGA-F5-TPQ" id="yKI-Ia-JFQ"/>
-                        <outlet property="multButton" destination="5Fm-3f-XWu" id="rrY-01-zUf"/>
-                        <outlet property="nineBUtton" destination="hiC-Vg-IIb" id="uBx-VM-Vkr"/>
-                        <outlet property="oneButton" destination="Jgo-PH-SnV" id="Ath-DQ-2I2"/>
-                        <outlet property="plusButton" destination="Bvc-bf-xHA" id="2Cz-hT-p2Q"/>
-                        <outlet property="result" destination="JOV-L1-vKw" id="aGu-Ng-Nxn"/>
-                        <outlet property="sevenButton" destination="nqT-GZ-RVc" id="YER-rL-CzA"/>
-                        <outlet property="sixButton" destination="yER-cO-n6I" id="l4j-97-jf6"/>
-                        <outlet property="threeButton" destination="3KF-lS-X2a" id="JCS-K0-aSv"/>
-                        <outlet property="twoButton" destination="Knq-eA-awz" id="2ge-fp-LJe"/>
-                        <outlet property="zeroButton" destination="9yQ-Wb-t59" id="yxy-mm-khR"/>
+                        <outlet property="result" destination="MPB-0g-O2w" id="ula-8R-OYm"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="137.68115942028987" y="115.84821428571428"/>
+            <point key="canvasLocation" x="136.80000000000001" y="115.27093596059113"/>
         </scene>
     </scenes>
 </document>
